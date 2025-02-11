@@ -1,18 +1,3 @@
-// import (
-// 	"fmt"
-// 	"net"
-// )
-
-// func main() {
-// 	listener, err := net.Listen("tcp", "localhost:1200")
-// 	if err != nil{
-// 		fmt.Println("Error :", err)
-// 	}
-// 	defer listener.Close()
-
-// 	fmt.Println("Server listening on 1200...")
-// }
-
 package main
 
 import (
@@ -31,6 +16,7 @@ func main() {
 		ipNet, ok := addr.(*net.IPNet)
 		if ok && !ipNet.IP.IsLoopback() && ipNet.IP.To4() != nil {
 			fmt.Println("Wi-Fi IP Address:", ipNet.IP.String())
+			// Something Something
 		}
 	}
 }
